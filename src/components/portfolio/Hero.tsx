@@ -13,7 +13,7 @@ export const Hero = () => {
         <div className="relative">
           <div
             aria-hidden
-            className="pointer-events-none absolute -top-16 -left-10 sm:-left-20 w-[520px] h-[520px] max-w-[120%] bg-gradient-to-br from-primary via-fuchsia-500 to-secondary opacity-30 blur-3xl animate-blob -z-10"
+            className="pointer-events-none absolute -top-16 -left-10 sm:-left-20 w-[520px] h-[520px] max-w-[120%] bg-gradient-to-br from-primary via-primary-glow to-secondary opacity-30 blur-3xl animate-blob -z-10"
           />
           <motion.div
             initial={{ opacity: 0, y: 20 }}
