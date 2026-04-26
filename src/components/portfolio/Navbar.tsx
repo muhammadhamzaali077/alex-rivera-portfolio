@@ -124,14 +124,32 @@ export const Navbar = () => {
                 </a>
               </li>
             ))}
-            <li>
-              <a
-                href="#contact"
-                onClick={() => setOpen(false)}
-                className="block text-center mt-2 rounded-xl bg-gradient-primary px-4 py-3 font-semibold text-primary-foreground"
-              >
-                Hire Me
-              </a>
+            <li className="pt-2 mt-1 border-t border-border/60">
+              {user ? (
+                <button
+                  onClick={() => { setOpen(false); handleSignOut(); }}
+                  className="block w-full text-center rounded-xl glass px-4 py-3 font-semibold text-foreground"
+                >
+                  Sign out
+                </button>
+              ) : (
+                <div className="grid grid-cols-2 gap-2">
+                  <Link
+                    to="/login"
+                    onClick={() => setOpen(false)}
+                    className="block text-center rounded-xl glass px-4 py-3 font-semibold text-foreground"
+                  >
+                    Sign in
+                  </Link>
+                  <Link
+                    to="/signup"
+                    onClick={() => setOpen(false)}
+                    className="block text-center rounded-xl bg-gradient-primary px-4 py-3 font-semibold text-primary-foreground"
+                  >
+                    Sign up
+                  </Link>
+                </div>
+              )}
             </li>
           </ul>
         </div>
