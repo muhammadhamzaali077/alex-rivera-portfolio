@@ -68,7 +68,13 @@ export const Navbar = () => {
         <div className="hidden md:flex items-center gap-2">
           {user ? (
             <>
-              <span className="text-xs font-mono text-muted-foreground px-2 max-w-[160px] truncate">
+              <Link
+                to="/dashboard"
+                className="inline-flex items-center justify-center rounded-full glass px-4 py-2 text-sm font-medium text-foreground hover:border-primary/60 hover:shadow-glow transition-all"
+              >
+                Dashboard
+              </Link>
+              <span className="text-xs font-mono text-muted-foreground px-2 max-w-[140px] truncate hidden lg:inline">
                 {user.email}
               </span>
               <button
