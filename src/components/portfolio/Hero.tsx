@@ -35,10 +35,13 @@ export const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="mt-6 text-xl sm:text-2xl text-muted-foreground max-w-2xl"
+            className="mt-6 text-xl sm:text-2xl text-muted-foreground max-w-2xl min-h-[2.5em]"
           >
-            <span className="text-foreground font-medium">Full-Stack Developer & AI Engineer</span> crafting
-            elegant interfaces and intelligent systems that ship.
+            <Typewriter
+              words={["Full-Stack Developer", "AI Engineer", "Open Source Builder"]}
+              className="text-foreground font-semibold text-gradient"
+            />{" "}
+            <span className="block sm:inline">crafting elegant interfaces and intelligent systems that ship.</span>
           </motion.p>
 
           <motion.div
@@ -49,14 +52,14 @@ export const Hero = () => {
           >
             <a
               href="#projects"
-              className="group inline-flex items-center gap-2 rounded-full bg-gradient-primary px-7 py-3.5 font-semibold text-primary-foreground shadow-glow hover:scale-[1.04] transition-transform"
+              className="group inline-flex items-center gap-2 rounded-full bg-gradient-primary px-7 py-3.5 font-semibold text-primary-foreground hover:scale-[1.04] transition-transform animate-btn-pulse-primary"
             >
               View My Work
               <ArrowRight className="size-4 group-hover:translate-x-1 transition-transform" />
             </a>
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 rounded-full glass px-7 py-3.5 font-semibold text-foreground hover:border-secondary/60 hover:shadow-cyan transition-all"
+              className="inline-flex items-center gap-2 rounded-full glass px-7 py-3.5 font-semibold text-foreground hover:border-secondary/60 hover:shadow-cyan transition-all animate-btn-pulse-secondary"
             >
               Hire Me
             </a>
