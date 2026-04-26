@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { Typewriter } from "@/components/portfolio/Typewriter";
+import profileImg from "@/assets/profile.png";
 
 export const Hero = () => {
   return (
