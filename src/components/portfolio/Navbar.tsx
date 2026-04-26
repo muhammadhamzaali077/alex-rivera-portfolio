@@ -16,6 +16,12 @@ const sections = [
 export const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const { user, signOut } = useAuth();
+
+  const handleSignOut = async () => {
+    await signOut();
+    toast({ title: "Signed out" });
+  };
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
