@@ -29,8 +29,10 @@ export const Navbar = () => {
     >
       <nav
         className={cn(
-          "container flex items-center justify-between rounded-full px-5 py-3 transition-all duration-500",
-          scrolled ? "glass shadow-card" : "bg-transparent"
+          "container flex items-center justify-between rounded-full px-5 py-3 transition-all duration-500 border",
+          scrolled
+            ? "bg-background/40 backdrop-blur-xl backdrop-saturate-150 border-border/50 shadow-card"
+            : "bg-transparent border-transparent backdrop-blur-0"
         )}
       >
         <a href="#hero" className="flex items-center gap-2 font-display font-bold text-lg">
