@@ -65,12 +65,37 @@ export const Navbar = () => {
           ))}
         </ul>
 
-        <a
-          href="#contact"
-          className="hidden md:inline-flex items-center justify-center rounded-full bg-gradient-primary px-5 py-2 text-sm font-semibold text-primary-foreground shadow-glow hover:scale-[1.03] transition-transform"
-        >
-          Hire Me
-        </a>
+        <div className="hidden md:flex items-center gap-2">
+          {user ? (
+            <>
+              <span className="text-xs font-mono text-muted-foreground px-2 max-w-[160px] truncate">
+                {user.email}
+              </span>
+              <button
+                onClick={handleSignOut}
+                className="inline-flex items-center gap-1.5 rounded-full glass px-4 py-2 text-sm font-medium text-foreground hover:border-secondary/60 hover:shadow-cyan transition-all"
+              >
+                <LogOut className="size-3.5" />
+                Sign out
+              </button>
+            </>
+          ) : (
+            <>
+              <Link
+                to="/login"
+                className="inline-flex items-center justify-center rounded-full px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition"
+              >
+                Sign in
+              </Link>
+              <Link
+                to="/signup"
+                className="inline-flex items-center justify-center rounded-full bg-gradient-primary px-5 py-2 text-sm font-semibold text-primary-foreground shadow-glow hover:scale-[1.03] transition-transform"
+              >
+                Sign up
+              </Link>
+            </>
+          )}
+        </div>
 
         <button
           onClick={() => setOpen((o) => !o)}
