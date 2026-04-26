@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { Typewriter } from "@/components/portfolio/Typewriter";
+import profileImg from "@/assets/profile.png";
 
 export const Hero = () => {
   return (
@@ -96,9 +97,15 @@ export const Hero = () => {
         >
           <div className="relative w-[420px] h-[420px]">
             <div className="absolute inset-0 rounded-full bg-gradient-primary opacity-30 blur-3xl animate-pulse-glow" />
-            <div className="absolute inset-6 rounded-full glass shadow-glow grid place-items-center overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-secondary/20" />
-              <div className="font-display text-[10rem] font-bold text-gradient relative">AR</div>
+            <div className="absolute inset-6 rounded-full overflow-hidden ring-1 ring-border/60 shadow-glow">
+              <img
+                src={profileImg}
+                alt="Portrait of Alex Rivera"
+                loading="eager"
+                className="w-full h-full object-cover"
+              />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-primary/25 via-transparent to-secondary/25 mix-blend-overlay" />
+              <div className="pointer-events-none absolute inset-0 rounded-full ring-1 ring-inset ring-primary/30" />
             </div>
             <div className="absolute -top-4 -right-4 glass rounded-2xl px-4 py-3 shadow-cyan animate-float">
               <div className="font-mono text-xs text-secondary">{`{ ai: true }`}</div>
