@@ -10,7 +10,11 @@ export const Hero = () => {
       <div className="absolute -bottom-32 -right-32 size-[480px] rounded-full bg-secondary/30 blur-[120px] animate-float" style={{ animationDelay: "2s" }} />
 
       <div className="container relative grid lg:grid-cols-[1.2fr_1fr] gap-12 items-center">
-        <div>
+        <div className="relative">
+          <div
+            aria-hidden
+            className="pointer-events-none absolute -top-16 -left-10 sm:-left-20 w-[520px] h-[520px] max-w-[120%] bg-gradient-to-br from-primary via-fuchsia-500 to-secondary opacity-30 blur-3xl animate-blob -z-10"
+          />
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
